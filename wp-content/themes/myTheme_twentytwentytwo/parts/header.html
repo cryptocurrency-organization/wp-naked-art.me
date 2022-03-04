@@ -1,8 +1,34 @@
 <!-- wp:group {"layout":{"inherit":true}} -->
+<span style="display:none;">HOHO1</span>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JV6FR1D3T1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JV6FR1D3T1');
+</script>
+<script>
+    console.log("DEBUG: LOAD1");
+    window.addEventListener('load', (event) => {
+        const all = document.querySelectorAll("iframe");
+        const elemToKeep = all[0];
+        if (elemToKeep) {
+            elemToKeep.removeAttribute("border");
+            document.querySelector(".pb-footer").prepend(elemToKeep);
+            all.forEach(elem => {
+                if (elem != elemToKeep) {
+                    elem.remove();
+                }
+            });
+        }
+    });
+</script>
 <div class="wp-block-group"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"bottom":"var(--wp--custom--spacing--large, 8rem)","top":"var(--wp--custom--spacing--small, 1.25rem)"}}},"layout":{"type":"flex","justifyContent":"space-between"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--custom--spacing--small, 1.25rem);padding-bottom:var(--wp--custom--spacing--large, 8rem)"><!-- wp:group {"layout":{"type":"flex"}} -->
 <div class="wp-block-group"><!-- wp:site-logo {"width":64} /-->
-
+<span style="display:none;">HOHO2</span>
 <!-- wp:site-title {"style":{"typography":{"fontStyle":"italic","fontWeight":"400"}}} /--></div>
 <!-- /wp:group -->
 
